@@ -1,0 +1,32 @@
+﻿# =====================================================================
+#  REGRAS DO ORGANIZADOR AUTOMÁTICO
+#  Cada linha:   palavras do nome do arquivo   =>   pasta de destino
+# =====================================================================
+#  - Separe as palavras com vírgula. Maiúsculas e acentos não importam.
+#  - A palavra tem que aparecer inteira no nome: "edo" não pega "credo".
+#    Termine com * para valer o começo da palavra: oscila* pega "oscilações".
+#  - Palavras que começam com ponto são extensões: .exe, .vhd
+#  - O destino começa na Área de Trabalho. Para Downloads, comece com DOWNLOADS\
+#  - Vale a PRIMEIRA regra que combinar, de cima para baixo.
+#  - Uma linha só com "=> pasta" (sem palavras) vira apenas um botão na janela.
+#  - Os botões da janela "Para qual pasta vai?" seguem a ordem deste arquivo.
+#  - Pode editar à vontade: o organizador relê este arquivo sozinho.
+#  - Semestre novo? É só trocar as matérias abaixo.
+# =====================================================================
+
+# Instaladores (vão para uma pasta dentro de Downloads)
+.exe, .msi, .msix, .msixbundle, .appx, .appxbundle  =>  DOWNLOADS\Instaladores
+
+# Faculdade: troque pelas suas matérias (código da disciplina + jeitos comuns de escrever o nome)
+mtm3101, calculo 1, calculo i, calc 1  =>  Faculdade\Cálculo 1
+fsc5101, fisica 1, fisica i, fisica1  =>  Faculdade\Física 1
+qmc5138, quimica geral  =>  Faculdade\Química Geral
+livro, livros  =>  Faculdade\Livros
+
+# Carreira
+carta de motivacao  =>  Carreira
+curriculo, resume, cv  =>  Carreira\Currículos
+
+# Só botões (sem palavras-chave)
+=>  Pessoal
+=>  Entretenimento
